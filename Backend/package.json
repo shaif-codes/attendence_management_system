@@ -11,6 +11,6 @@
     "start": "^5.1.0"
   },
   "scripts": {
-    "server": "node ./Server.js"
+    "server": "node ./index.js"
   }
 }
