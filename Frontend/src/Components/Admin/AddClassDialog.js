@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './AddClassDialog.css';
 
-const apiUrl = process.env.API_URL
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const AddClassDialog = ({ onAddClass, setToggleDialog }) => {
     const [showDialog, setShowDialog] = useState(false);
