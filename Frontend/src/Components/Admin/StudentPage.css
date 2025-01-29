@@ -1,0 +1,32 @@
+body {
+    overflow-x: hidden;
+}
+
+.student-page-container {
+    margin-left: 300px;
+    margin-top: 40px;
+    
+}
+
+.student-card {
+    flex: 1;
+    margin: 5px;
+    max-width: calc(85% - 20px);
+    width: 85%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    
+}
+
+.student-card:hover{
+    transform: translatey(-5px);
+}
+
+
+@media (max-width: 768px) {
+    .student-page-container {
+        margin-left: 10px;
+        /* Reset margin-top for mobile view */
+    }
+}

@@ -1,0 +1,109 @@
+.icons{
+    font-size: 60px;
+}
+/* .row{
+    display: flex;
+    justify-content: space-around;
+} */
+
+/* FactsSection.css */
+
+/* FactsSection.css */
+
+.info {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.section-title p {
+    font-size: 18px;
+    color: #666;
+}
+
+.info .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.info-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    width: 200px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    /* Add transition for smooth hover effect */
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    /* Move the box up slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Add a subtle shadow on hover */
+}
+
+.info-box .icons {
+    font-size: 48px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    /* Add transition for smooth hover effect */
+}
+
+.info-box:hover .icons {
+    color: #3498db;
+    /* Change icon color on hover */
+}
+
+.info-box h3 {
+    font-size: 36px;
+    color: #333;
+    margin: 0;
+    transition: all 0.3s ease;
+    /* Add transition for smooth hover effect */
+}
+
+.info-box:hover h3 {
+    color: #2c3e50;
+    /* Change heading color on hover */
+}
+
+.info-box h5 {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Additional CSS for mobile view */
+@media (max-width: 768px) {
+    .info .row {
+        justify-content: center;
+    }
+
+    .info-box {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: calc(100% - 100px);
+        height: calc(100% - 50px);
+        margin: 0 70px 30px;
+    }
+}

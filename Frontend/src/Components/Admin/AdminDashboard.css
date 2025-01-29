@@ -1,0 +1,17 @@
+.admin-dashboard-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -10%;
+    /* width: 100vw;
+    height: 100vh; */
+    /* Use flexbox to create side-by-side layout */
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin-left: -285px;
+        /* Reset margin-top for mobile view */
+    }
+}
+
+

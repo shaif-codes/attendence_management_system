@@ -1,0 +1,83 @@
+/* AddTeacherDialog.css */
+
+.add-teacher-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.add-teacher-dialog-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-teacher-dialog-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.add-teacher-dialog-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-teacher-dialog-card .btn-close {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    color: #555;
+}
+
+.add-teacher-dialog-card .btn-close:hover {
+    color: #333;
+}
+
+.add-teacher-dialog-card form .form-group {
+    margin-bottom: 15px;
+}
+
+.add-teacher-dialog-card form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.add-teacher-dialog-card form .form-control:focus {
+    border-color: #6c63ff;
+    outline: none;
+}
+
+.add-teacher-dialog-card form .btn-primary {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #6c63ff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-teacher-dialog-card form .btn-primary:hover {
+    background-color: #5647ff;
+}

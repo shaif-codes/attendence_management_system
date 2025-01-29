@@ -1,0 +1,51 @@
+.custom-table {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 90%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Add box-shadow */
+}
+
+.custom-table th,
+.custom-table td {
+    border: none;
+}
+
+.custom-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 15px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.form-check-label {
+    margin-left: 10px;
+}
+
+.form-switch {
+    display: flex;
+    justify-content: center;
+    /* Align switch button to center */
+}
+
+.teacher-container {
+    margin-left: 300px;
+}
+
+@media (max-width: 768px) {
+    .teacher-container {
+        margin-left: 10px;
+    }
+}

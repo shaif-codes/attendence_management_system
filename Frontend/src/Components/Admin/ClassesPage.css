@@ -1,0 +1,68 @@
+/* ClassesPage.css */
+body{
+    overflow-x: hidden;
+}
+.classes-page-container {
+    margin-left: 300px;
+        margin-top: 40px;
+        /* overflow: hidden; */
+    /* Adjust the top margin as needed to leave space for the navbar */
+}
+
+.class-card {
+    flex: 1;
+    margin: 5px;
+    max-width: calc(85% - 20px);
+    /* Adjust as needed */
+}
+
+@media (max-width: 768px) {
+    .classes-page-container {
+        margin-left: 10px;
+        /* Reset margin-top for mobile view */
+    }
+}
+
+
+/* ClassesPage.css */
+
+/* Style for class cards */
+.class-card {
+    /* background-color: #f5f5f5; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for class cards */
+.class-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Style for Add Class button */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for Add Class button */
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Style for Edit and Delete buttons */
+.btn-primary,
+.btn-danger {
+    border-radius: 5px;
+    margin-left: 20px;
+}
+.btn-dangerr:hover{
+    background-color: red;
+}
+/* Icon color for Edit and Delete buttons */
+.btn-primary svg,
+.btn-danger svg {
+    color: #fff;
+}

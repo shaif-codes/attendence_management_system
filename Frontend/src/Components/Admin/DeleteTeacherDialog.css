@@ -1,0 +1,66 @@
+/* DeleteTeacherDialog.css */
+
+.delete-teacher-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.delete-teacher-dialog-content {
+    width: 40%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.delete-teacher-dialog-content h3 {
+    margin-bottom: 10px;
+}
+
+.delete-teacher-dialog-content p {
+    margin-bottom: 20px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger {
+    background-color: #ff5c5c;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #ff3f3f;
+}
+
+.btn-secondary {
+    background-color: #bbb;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #999;
+}

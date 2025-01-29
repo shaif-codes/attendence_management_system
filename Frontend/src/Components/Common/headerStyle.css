@@ -1,0 +1,33 @@
+a[title]::after {
+    content: attr(title);
+    display: inline-block;
+    background-color: #343131;
+    /* Background color */
+    color: #fff;
+    /* Text color */
+    padding: 4px 8px;
+    /* Padding */
+    border-radius: 4px;
+    /* Border radius */
+    font-size: 12px;
+    /* Font size */
+    position: absolute;
+    /* Position the tooltip */
+    top: -30px;
+    /* Adjust as needed */
+    left: 50%;
+    /* Adjust as needed */
+    transform: translateX(-50%);
+    /* Center horizontally */
+    opacity: 0;
+    /* Hide by default */
+    transition: opacity 0.3s ease;
+    /* Add transition for smooth appearance */
+}
+.acitve{
+    color: #149ddd
+}
+a:hover[title]::after {
+    opacity: 1;
+    /* Show tooltip on hover */
+}
