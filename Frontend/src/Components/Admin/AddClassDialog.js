@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './AddClassDialog.css';
 
+const apiUrl = process.env.API_URL
+
 const AddClassDialog = ({ onAddClass, setToggleDialog }) => {
     const [showDialog, setShowDialog] = useState(false);
     const [className, setClassName] = useState('');
@@ -19,8 +21,8 @@ const AddClassDialog = ({ onAddClass, setToggleDialog }) => {
             classTeacher: teacherName,
             startDate: startDate
         };
-
-        fetch('/class/add', {
+        console.log(apiUrl);
+        fetch(`${apiUrl}/class/add`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

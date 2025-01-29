@@ -3,6 +3,8 @@ import Header from "../Common/Header";
 import { useLocation } from "react-router-dom";
 import "./TeacherDashboard.css"; // Import CSS file for styling
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const TeacherDashboard = () => {
     const { teacher } = useLocation().state;
     const [details] = teacher;
@@ -22,7 +24,7 @@ const TeacherDashboard = () => {
     useEffect(() => {
         const getStudents = async () => {
             try {
-                const response = await fetch('/astudent/class/', {
+                const response = await fetch(`${apiUrl}/astudent/class/`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -57,7 +59,7 @@ const TeacherDashboard = () => {
             status: student.present ? 'Present' : 'Absent'
         }));
         try {
-           const response = await fetch('/attendance/submit', {
+           const response = await fetch(`${apiUrl}/attendance/submit`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

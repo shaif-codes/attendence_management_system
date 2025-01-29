@@ -7,8 +7,11 @@ import { BsPlus, BsPencil, BsTrash } from 'react-icons/bs';
 import { FaSave } from "react-icons/fa";
 import DeleteStudentDialog from './DeleteStudentDialog';
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const getStudents = async () => {
-    const response = await fetch('/astudent/all');
+    const response = await fetch(`${apiUrl}/astudent/all`);
+    console.log(apiUrl);
     const data = await response.json();
     return data;
 };
@@ -33,7 +36,7 @@ const StudentPage = () => {
 
     useEffect(() => {
         getStudents().then(data => setStudents(data));
-    }, [students]);
+    }, []);
 
     const studentLinks = [
         { to: "/admin", icon: "bx bxs-dashboard", text: "Dashboard" },
@@ -62,7 +65,7 @@ const StudentPage = () => {
 
     const handleDeleteConfirm = async (confirm) => {
         if (confirm){
-            await fetch('/astudent/delete', {
+            await fetch(`${apiUrl}/astudent/delete`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ _id: deleteStudentId })
@@ -119,7 +122,7 @@ const StudentPage = () => {
 
         console.log(updatedStudents[studentIndex])
 
-        await fetch('/astudent/update', {
+        await fetch(`${apiUrl}/astudent/update`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updatedStudents[studentIndex])
@@ -128,7 +131,7 @@ const StudentPage = () => {
             .catch(error => console.log(error));
         
 
-        setStudents(updatedStudents);
+        getStudents().then(data => setStudents(data)); // Refresh the student lis
         // Close the edit form
         setEditStudentId('');
     };

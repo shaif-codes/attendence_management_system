@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import './AddTeacherDialog.css';
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const AddTeacherDialog = ({ onAddTeacher, onClose }) => {
     const [uid, setUid] = useState('');
     const [name, setName] = useState('');
@@ -20,7 +22,7 @@ const AddTeacherDialog = ({ onAddTeacher, onClose }) => {
             phone: phone,
             password: password
         };
-        await fetch('/teacher/add', {
+        await fetch(`${apiUrl}/teacher/add`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

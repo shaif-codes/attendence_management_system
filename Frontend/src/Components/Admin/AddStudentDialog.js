@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import './AddStudentDialog.css';
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const AddStudentDialog = ({ onAddStudent, onClose }) => {
     // const [uid, setUid] = useState('');
     const [name, setName] = useState('');
@@ -38,7 +40,7 @@ const AddStudentDialog = ({ onAddStudent, onClose }) => {
         //     gender: "Female"
         // }
 
-        await fetch('/astudent/add', {
+        await fetch(`${apiUrl}/astudent/add`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

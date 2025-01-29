@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Import eye icons from react-icons library
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 function Login() {
     const [uid, setUid] = useState('');
     const [password, setPassword] = useState('');
@@ -20,7 +22,7 @@ function Login() {
         console.log(dataToSend)
 
         try {
-            const response = await fetch("/login/validation", {
+            const response = await fetch(`${apiUrl}/login/validation`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'

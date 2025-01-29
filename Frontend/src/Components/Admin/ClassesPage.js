@@ -7,9 +7,11 @@ import { BsPlus } from 'react-icons/bs';
 import { FaSave } from "react-icons/fa";
 import DeleteClassDialog from './DeleteClassDialog';
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const getAllClasses = async () => {
     try {
-        const response = await fetch('/class/all');
+        const response = await fetch(`${apiUrl}/class/all`);
         const data = await response.json();
         return data;
     } catch (error) {
@@ -37,7 +39,7 @@ const ClassesPage = () => {
         };
 
         fetchData();
-    }, [updatedClassName, classes]);
+    }, [updatedClassName]);
 
     const formatDateString = (isoDateString) => {
         const date = new Date(isoDateString);
@@ -75,7 +77,7 @@ const ClassesPage = () => {
 
     const handleDeleteConfirm = async (confirm) => {
         if (confirm) {
-            await fetch('/class/delete', {
+            await fetch(`${apiUrl}/class/delete`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -124,7 +126,7 @@ const ClassesPage = () => {
             startDate: updatedStartDate
         };
         // Update the state with the new classes array
-        await fetch('/class/update', {
+        await fetch(`${apiUrl}/class/update`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

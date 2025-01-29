@@ -148,10 +148,11 @@ import AddTeacherDialog from './AddTeacherDialog';
 import './TeacherPage.css';
 import DeleteTeacherDialog from './DeleteTeacherDialog';
 
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const getTeachers = async () => {
     try {
-        const response = await fetch('teacher/all');
+        const response = await fetch(`${apiUrl}/teacher/all`);
         const data = await response.json();
         return data;
     } catch (error) {
@@ -175,7 +176,7 @@ const TeacherPage = () => {
 
     useEffect(() => {
         getTeachers().then(data => setTeachers(data));
-    }, [teachers]);
+    }, []);
 
     const teacherLinks = [
         { to: "/admin", icon: "bx bxs-dashboard", text: "Dashboard" },
@@ -221,7 +222,7 @@ const TeacherPage = () => {
         }
         console.log(updatedTeachers[teacherIndex])
         console.log(updatedTeachers)
-        await fetch('/teacher/update', {
+        await fetch(`${apiUrl}/teacher/update`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updatedTeachers[teacherIndex])
@@ -247,7 +248,7 @@ const TeacherPage = () => {
         if (confirm) {
             const updatedTeachers = teachers.filter(teacher => teacher._id !== deleteTeacherId);
             console.log(deleteTeacherId)
-            fetch('/teacher/delete', {
+            fetch(`${apiUrl}/teacher/delete`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ _id: deleteTeacherId })
